@@ -1,10 +1,11 @@
-import XHRInterceptor from 'react-native/Libraries/Network/XHRInterceptor';
+
 import NetworkRequestInfo from './NetworkRequestInfo';
 import { Headers, RequestMethod, StartNetworkLoggingOptions } from './types';
 import extractHost from './utils/extractHost';
 import { warn } from './utils/logger';
 import debounce from './utils/debounce';
 import { LOGGER_REFRESH_RATE, LOGGER_MAX_REQUESTS } from './constant';
+import XHRInterceptor from 'react-native/src/private/inspector/XHRInterceptor';
 
 let nextXHRId = 0;
 
